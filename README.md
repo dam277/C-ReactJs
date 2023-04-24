@@ -1,5 +1,5 @@
 <div align="center">
-    <h1> React </h1>          <br />
+    <h1> ReactJs </h1>          <br />
 </div>
 <div align="center">
     <h2> Languages and libraries used for this course </h2>
