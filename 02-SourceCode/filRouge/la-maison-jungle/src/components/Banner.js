@@ -1,18 +1,18 @@
-import "../css/banner.css";
-import logo from "../assets/logo.png"
-import Recommendation from "./Recommendation";
+import "../styles/banner.css";
+import logo from "../assets/logo.png";
+import Recomendation from "./Recommendation";
 
-function Banner() 
+function Banner()
 {
-    const TITLE = 'La maison jungle'
+    const title = "La maison jungle";
     return (
-    <div className="lmj-banner">
-        <div className="lmj-banner-row">
-            <img src={logo} alt="La maison jungle logo" className="lmj-logo" />
-            <h1 className="lmj-title">{ TITLE }</h1>
+        <div className="lmj-banner ">
+            <div>
+                <img src={logo} alt="la maison jungle" className="lmj-logo"/>
+                <h1 className="lmj-title">{title}</h1> 
+            </div>
+            <Recomendation />
         </div>
-        <Recommendation/>
-    </div>
     )
 }
 
