@@ -1,5 +1,7 @@
 import { plantList } from "../datas/plantList";
+import PlantItem from "./PlantItem";
 import "../styles/shoppingList.css";
+import monstera from "../assets/monstera.jpg";
 
 function ShoppingList() 
 {
@@ -33,11 +35,7 @@ function ShoppingList()
             <ul className="lmj-plant-list">
                 {
                     plantList.map((plant) => (
-                        <li key={plant.id} className="lmj-plant-item">
-                            {plant.name}
-                            {plant.isBestSale && <span>🔥</span>}
-                            {plant.isSpecialOffer && <div className="lmj-sales">Soldes</div>}
-                        </li>
+                        <PlantItem name={plant.name} cover={monstera} id={plant.id} water={plant.water} light={plant.light} />
                     ))
                 }
             </ul>
