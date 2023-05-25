@@ -8,6 +8,8 @@ import Survey from './Pages/Survey';
 import ClientForm from './Components/ClientForm';
 import FreelanceForm from './Components/FreelanceForm';
 import Error from './Components/Error';
+import Results from './Pages/Results';
+import Freelances from './Pages/Freelances';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +23,8 @@ root.render(
                     <Route path="freelance" element={<FreelanceForm />} /> */}
                 </Route>
                 <Route path="*" element={<Error />} />
+                <Route path="/results" element={<Results />} />
+                <Route path="/freelances" element={<Freelances />} />
             </Routes>
         </Router>
     </React.StrictMode>
