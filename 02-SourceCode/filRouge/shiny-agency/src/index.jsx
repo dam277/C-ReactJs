@@ -11,7 +11,7 @@ import Error from './Components/Error';
 import Results from './Pages/Results';
 import Freelances from './Pages/Freelances';
 import { createGlobalStyle } from 'styled-components'
-import { ThemeProvider } from './Utils/Context';
+import { ThemeProvider, SurveyProvider } from './Utils/Context';
 import GlobalStyle from './Utils/Styles/GlobalStyle'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,19 +19,21 @@ root.render(
     <React.StrictMode>
         <Router>
             <ThemeProvider>
-                <GlobalStyle />
-                <Header />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/survey/:questionNumber" element={<Survey />}>
-                        {/* <Route path="client" element={<ClientForm />} />
-                        <Route path="freelance" element={<FreelanceForm />} /> */}
-                    </Route>
-                    <Route path="*" element={<Error />} />
-                    <Route path="/results" element={<Results />} />
-                    <Route path="/freelances" element={<Freelances />} />
-                </Routes>
-                <Footer />
+                <SurveyProvider>
+                    <GlobalStyle />
+                    <Header />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/survey/:questionNumber" element={<Survey />}>
+                            {/* <Route path="client" element={<ClientForm />} />
+                            <Route path="freelance" element={<FreelanceForm />} /> */}
+                        </Route>
+                        <Route path="*" element={<Error />} />
+                        <Route path="/results" element={<Results />} />
+                        <Route path="/freelances" element={<Freelances />} />
+                    </Routes>
+                    <Footer />
+                </SurveyProvider>
             </ThemeProvider>
         </Router>
     </React.StrictMode>
