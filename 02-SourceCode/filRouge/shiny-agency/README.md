@@ -4,9 +4,10 @@ https://openclassrooms.com/fr/courses/7150606-creez-une-application-react-comple
 
 # Commande addons
 
-Styled-components : npm install styled-components@6.0.0-rc.2
-React-Router : npm install
-MSW (testing library to simulate api calls) : npm install msw --dev
+Styled-components : npm install styled-components@6.0.0-rc.2          <br />
+React-Router : npm install react-router-dom@6.11.2                    <br />
+MSW (testing library to simulate api calls) : npm install msw --dev   <br />
+Prop-types : npm install prop-types
 
 # Convention de codage pour composants
 ## Elements :
