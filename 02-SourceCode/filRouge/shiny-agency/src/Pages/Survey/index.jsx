@@ -57,7 +57,8 @@ const ReplyWrapper = styled.div`
   flex-direction: row;
 `
 
-function Survey() {
+function Survey() 
+{
   const { questionNumber } = useParams()
   const questionNumberInt = parseInt(questionNumber)
   const prevQuestionNumber = questionNumberInt === 1 ? 1 : questionNumberInt - 1
